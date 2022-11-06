@@ -38,6 +38,7 @@ def add():
         cur = conn.cursor()
         cur.execute(f"INSERT INTO project (first_name, last_name, email, project, hours, new_feature, short_description, date_of_change) VALUES ('{name}', '{surname}', '{mail}', '{project}', '{hour}', '{feat}', '{com}','{date}')")
         conn.commit()
+        clear_tabs()
 
     cur.close()
     conn.close()
