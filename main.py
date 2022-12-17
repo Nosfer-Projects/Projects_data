@@ -8,6 +8,7 @@ import psycopg2 as pg2
 PASSWORD = 'Your Password to SQL'
 
 def clear_tabs ():
+    #Clears all data that has been written from the table
     first_name_entry.delete(0, END)
     last_name_entry.delete(0, END)
     email_entry.delete(0, END)
@@ -19,6 +20,7 @@ def clear_tabs ():
 
 
 def add():
+    #Adds data entered in the program to the SQL server after connection to it
     name =first_name_entry.get()
     surname = last_name_entry.get()
     mail= email_entry.get()
@@ -50,6 +52,7 @@ def add():
 
 
 window = Tk()
+#Created proper window for app
 window.title("Projects data".center(1))
 window.geometry("900x600")
 window.resizable(False, False)
@@ -63,7 +66,7 @@ my_label = Label(window, image=logo_img)
 my_label.place(x=-2, y=0)
 
 dotum = tkFont.Font(family="Dotum",weight="bold")
-
+#Adding program interface
 first_name = Label(text="Name", width=10, font=dotum)
 first_name.place(x= 100, y=175)
 
@@ -113,7 +116,7 @@ comments.place(x= 600, y=400)
 comments_entery = Text(width=20, height=4)
 comments_entery.place(x=720, y=400)
 
-
+#Combination of buttons with functions above
 add_to_sql = Button(text= 'Add', width=35, font=dotum, bg="#54B435", command=add)
 add_to_sql.place(x= 40, y= 520, height=60)
 
