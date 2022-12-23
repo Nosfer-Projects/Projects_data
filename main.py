@@ -35,6 +35,7 @@ def add():
         or feat == "" or com=="":
         messagebox.showwarning(title = "Error", message= "Please fill all fields! ")
     else:
+        #If all fields are filled program connect to database and put all data to table in PostgreSQL
 
         conn = pg2.connect(database='name_of_database', user='your_user_name',password=PASSWORD, host="localhost", port="5432")
         cur = conn.cursor()
