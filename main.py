@@ -1,5 +1,6 @@
 import random
 from tkinter import *
+from tkinter import messagebox
 import tkinter.font as tkFont
 import psycopg2 as pg2
 
