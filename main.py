@@ -116,7 +116,7 @@ comments.place(x= 600, y=400)
 comments_entery = Text(width=20, height=4)
 comments_entery.place(x=720, y=400)
 
-#Combination of buttons with functions above
+#Combination of buttons with functions above(add,clear)
 add_to_sql = Button(text= 'Add', width=35, font=dotum, bg="#54B435", command=add)
 add_to_sql.place(x= 40, y= 520, height=60)
 
